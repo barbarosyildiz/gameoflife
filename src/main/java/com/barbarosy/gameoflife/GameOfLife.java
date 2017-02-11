@@ -1,51 +1,40 @@
-package com.barbarosy.trytwo;
+package com.barbarosy.gameoflife;
+
+import com.barbarosy.gameoflife.models.BornOrLive;
+import com.barbarosy.gameoflife.models.Kill;
+import com.barbarosy.gameoflife.models.Live;
+import com.barbarosy.gameoflife.models.LiveOrDie;
 
 import java.util.HashMap;
-import java.util.Hashtable;
 
 /**
  * Created by barbarosy on 09.02.2017.
  */
 public class GameOfLife {
+    private static boolean[][] board;
+    HashMap<Integer, LiveOrDie> hashtable = new HashMap();
     private int dimension;
-    public static boolean[][] board;
     private long generation;
-    HashMap<Integer, Object> hashtable = new HashMap();
-
 
 
     public GameOfLife(int dimension) {
         this.dimension = dimension;
         createBoard();
-        createHashTable();
+        createRules();
         this.generation = 0;
     }
 
-    private void createHashTable() {
-        hashtable.put(0, Kill.kill());
-        hashtable.put(1, Kill.kill());
-        hashtable.put(2, Live.live());
-        hashtable.put(3, BornOrLive.BornOrLive());
-        hashtable.put(4, Kill.kill());
-        hashtable.put(5, Kill.kill());
-        hashtable.put(6, Kill.kill());
-        hashtable.put(7, Kill.kill());
-        hashtable.put(8, Kill.kill());
+    private void createRules() {
+        hashtable.put(0, new Kill());
+        hashtable.put(1, new Kill());
+        hashtable.put(2, new Live());
+        hashtable.put(3, new BornOrLive());
+        hashtable.put(4, new Kill());
+        hashtable.put(5, new Kill());
+        hashtable.put(6, new Kill());
+        hashtable.put(7, new Kill());
+        hashtable.put(8, new Kill());
     }
-
-
-    /*
-    private Object live() {
-        return isAlive;
-    }
-
-    private Object bornOrLive() {
-        return true;
-    }
-
-    private Object new Kill() {
-        return false;
-    }*/
 
     private void createBoard() {
         boolean[][] newBoard = new boolean[dimension][dimension];
@@ -83,18 +72,15 @@ public class GameOfLife {
     public boolean isBordEmpty() {
 
         for (int i = 0; i < board.length; i++) {
+
             for (int j = 0; j < board[i].length; j++) {
                 if (board[i][j] == true) {
                     return false;
                 }
             }
         }
-
         return true;
     }
-
-
-
 
 
     private boolean applyRules(int row, int column) {
@@ -118,35 +104,9 @@ public class GameOfLife {
             liveNeighbours--;
         }
 
-        /* try to use hashmap for if else
-        Global.isAlive = isCellAlive;
-        hashtable.get(liveNeighbours);
-        return Global.status;*/
-
-
-        if (!isCellAlive){
-            if (liveNeighbours==3)
-                return true;
-            else
-                return false;
-        }else
-        {
-            if (liveNeighbours==2||liveNeighbours==3)
-                return true;
-            else
-                return false;
-
-        }
-
-
-        /*
-        if(liveNeighbours == 2 && isCellAlive){
-            return true;
-        } else if(liveNeighbours == 3){
-            return true;
-        } else {
-            return false;
-        }*/
+        //try to use hashmap istead of conditional statements
+        LiveOrDie liveOrDie = hashtable.get(liveNeighbours);
+        return liveOrDie.getLiveOrDieStatus(isCellAlive);
 
     }
 

@@ -1,4 +1,4 @@
-package com.barbarosy.trytwo;
+package com.barbarosy.gameoflife;
 
 /**
  * Created by barbarosy on 09.02.2017.
