@@ -23,6 +23,7 @@ stop:
      bin/./stop-gameoflife.sh
 
 ## Requerements ##
+* Maven
 * Java 8
 ## How to run tests ##
 * mvn clean verify
