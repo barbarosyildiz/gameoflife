@@ -1,29 +1,39 @@
-# README #
+### Game Of Life (Java) ###
 
-This README would normally document whatever steps are necessary to get your application up and running.
+### What is Game of Life? ###
 
-### What is this repository for? ###
+*The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.
+* [Learn More](https://en.wikipedia.org/wiki/Conway's_Game_of_Life)
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+This application Game of Life Java implementation that show the world console output.
 
-### How do I get set up? ###
+### How to use? ###
+## Usage ##
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* There is start and stop scripts in bin directory.
 
-### Contribution guidelines ###
+start: 
+     
+```
+#!bash
 
-* Writing tests
-* Code review
-* Other guidelines
+bin/./start-gameoflife.sh [dimention]
+```
+* Parameters
 
-### Who do I talk to? ###
+     *dimension:* Positive integer value size of board. Example: 10
 
-* Repo owner or admin
-* Other community or team contact
+     
+
+stop:
+     
+     bin/./stop-gameoflife.sh
+
+## Requerements ##
+* Maven
+* Java 8
+## How to run tests ##
+* mvn clean verify
+
+### Example ###
+[Console Output Video](https://youtu.be/dBS99UWrTmQ)
