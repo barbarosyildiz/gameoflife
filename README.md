@@ -13,10 +13,17 @@ This application Game of Life Java implementation that show the world console ou
 * There is start and stop scripts in bin directory.
 
 start: 
+     
+```
+#!bash
 
-     dimention: Positive integer value size of board. Example: 10
+bin/./start-gameoflife.sh [dimention]
+```
+* Parameters
 
-     bin/./start-gameoflife.sh [dimention]
+     *dimension:* Positive integer value size of board. Example: 10
+
+     
 
 stop:
      
