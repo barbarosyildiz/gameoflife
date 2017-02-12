@@ -11,18 +11,21 @@ This application Game of Life Java implementation that show the world console ou
 ## Usage ##
 
 * There is start and stop scripts in bin directory.
+
 start: 
+
+     dimention: Positive integer value size of board. Example: 10
+
      bin/./start-gameoflife.sh [dimention]
+
 stop:
+     
      bin/./stop-gameoflife.sh
+
 ## Requerements ##
-
-
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* Java 8
+## How to run tests ##
+* mvn clean verify
 
 ### Contribution guidelines ###
 
