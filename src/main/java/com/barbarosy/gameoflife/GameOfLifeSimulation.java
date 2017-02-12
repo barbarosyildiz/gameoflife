@@ -5,15 +5,22 @@ package com.barbarosy.gameoflife;
  */
 public class GameOfLifeSimulation {
     public static void main(String[] args) throws InterruptedException {
-        GameOfLife earth = new GameOfLife(10);
-        earth.drawBoard();
-        while(true){
-            Thread.sleep(200);
-            earth.nextGeneration();
+
+        int dimension = Integer.valueOf(args[0]);
+        if (dimension > 0) {
+            GameOfLife earth = new GameOfLife(dimension);
             earth.drawBoard();
-            if (earth.isBordEmpty()){
-                System.exit(0);
+            while (true) {
+                Thread.sleep(200);
+                earth.nextGeneration();
+                earth.drawBoard();
+                if (earth.isBordEmpty()) {
+                    System.exit(0);
+                }
             }
-        }
+        }else
+            System.err.println("Dimension of board can not be 0 or negative");
+
+
     }
 }
