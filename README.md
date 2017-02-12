@@ -1,15 +1,23 @@
-# README #
-
-This README would normally document whatever steps are necessary to get your application up and running.
+### Game Of Life (Java) ###
 
 ### What is Game of Life? ###
 
 *The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.
 * [Learn More](https://en.wikipedia.org/wiki/Conway's_Game_of_Life)
 
-### How do I get set up? ###
+This application Game of Life Java implementation that show the world console output.
 
-* Summary of set up
+### How to use? ###
+## Usage ##
+
+* There is start and stop scripts in bin directory.
+start: 
+     bin/./start-gameoflife.sh [dimention]
+stop:
+     bin/./stop-gameoflife.sh
+## Requerements ##
+
+
 * Configuration
 * Dependencies
 * Database configuration
