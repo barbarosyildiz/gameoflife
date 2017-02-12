@@ -2,11 +2,10 @@
 
 This README would normally document whatever steps are necessary to get your application up and running.
 
-### What is this repository for? ###
+### What is Game of Life? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+*The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.
+* [Learn More](https://en.wikipedia.org/wiki/Conway's_Game_of_Life)
 
 ### How do I get set up? ###
 
