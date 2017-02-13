@@ -30,7 +30,7 @@ public class GameOfLifeTest extends TestCase {
                 , {false, false, false, false, false, false}};
         gameOfLife.setBoard(blinker);
         gameOfLife.nextGeneration();
-        assertEquals("Something went wrong with blinker patern",gameOfLife.getBoard()[3][1]&&gameOfLife.getBoard()[3][2]&&gameOfLife.getBoard()[3][3],true);
+        assertEquals("Something went wrong with blinker pattern",gameOfLife.getBoard()[3][1]&&gameOfLife.getBoard()[3][2]&&gameOfLife.getBoard()[3][3],true);
 
 
     }
@@ -47,7 +47,7 @@ public class GameOfLifeTest extends TestCase {
                 , {false, false, false, false, false, false}};
         gameOfLife.setBoard(boat);
         gameOfLife.nextGeneration();
-        assertEquals("Something went wrong with boat patern",gameOfLife.getBoard()[1][1]&&gameOfLife.getBoard()[1][2]&&gameOfLife.getBoard()[2][1]&&gameOfLife.getBoard()[3][2],true);
+        assertEquals("Something went wrong with boat pattern",gameOfLife.getBoard()[1][1]&&gameOfLife.getBoard()[1][2]&&gameOfLife.getBoard()[2][1]&&gameOfLife.getBoard()[3][2],true);
 
     }
 
