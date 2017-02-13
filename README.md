@@ -17,7 +17,7 @@ start:
 ```
 #!bash
 
-bin/./start-gameoflife.sh [dimention]
+bin/start-gameoflife.sh [dimension]
 ```
 * Parameters
 
@@ -29,7 +29,7 @@ stop:
      
      bin/./stop-gameoflife.sh
 
-## Requerements ##
+## Requierements ##
 * Maven
 * Java 8
 ## How to run tests ##
