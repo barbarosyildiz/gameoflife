@@ -11,11 +11,26 @@ import java.util.HashMap;
  * Created by barbarosy on 09.02.2017.
  */
 public class GameOfLife {
-    private static boolean[][] board;
-    HashMap<Integer, LiveOrDie> hashtable = new HashMap();
+    private  boolean[][] board;
+    private final HashMap<Integer, LiveOrDie> hashtable = new HashMap();
     private int dimension;
     private long generation;
 
+    public boolean[][] getBoard() {
+        return board;
+    }
+
+    public void setBoard(boolean[][] board) {
+        this.board = board;
+    }
+
+    public HashMap<Integer, LiveOrDie> getHashtable() {
+        return hashtable;
+    }
+
+    public long getGeneration() {
+        return generation;
+    }
 
     public GameOfLife(int dimension) {
         this.dimension = dimension;
@@ -24,7 +39,7 @@ public class GameOfLife {
         this.generation = 0;
     }
 
-    private void createRules() {
+    public void createRules() {
         hashtable.put(0, new Kill());
         hashtable.put(1, new Kill());
         hashtable.put(2, new Live());
