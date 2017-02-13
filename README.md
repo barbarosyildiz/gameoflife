@@ -27,7 +27,7 @@ bin/start-gameoflife.sh [dimension]
 
 stop:
      
-     bin/./stop-gameoflife.sh
+     bin/stop-gameoflife.sh
 
 ## Requierements ##
 * Maven
