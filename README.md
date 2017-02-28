@@ -32,6 +32,7 @@ stop:
 ## Requierements ##
 * Maven
 * Java 8
+
 ## How to run tests ##
 * mvn clean verify
 
